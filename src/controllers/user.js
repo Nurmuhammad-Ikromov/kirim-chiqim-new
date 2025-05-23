@@ -12,7 +12,7 @@ export const register = async (req, res) => {
       return res.status(400).send({ message: "All fields are required!" });
     }
 
-    if (age < 0 || typeof age !== "number") {
+    if (age < 0 ) {
       return res
         .status(400)
         .json({ message: "Age must be a positive number!" });
